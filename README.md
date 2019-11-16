@@ -1,7 +1,7 @@
 # simple-flask-api
 simple flask api 
 
-##bInstallation
+## Installation
 
 ### Requirements:
 
