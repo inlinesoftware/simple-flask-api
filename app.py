@@ -17,5 +17,10 @@ def broadcast(bot, chat_id, msg):
 		contents = urllib2.urlopen(base_url+bot+"/sendMessage?chat_id="+chat_id+"&text="+msg).read()
 		return jsonify(contents)
 
+@app.route("/broadcast", methods=['POST'])
+def broad():
+	data = request.json
+	return jsonify(data)
+
 if __name__ == '__main__':
 	app.run(debug=True)

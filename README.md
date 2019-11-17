@@ -10,3 +10,6 @@ simple flask api
 
 ```pip install Flask-API```
 
+
+### CURL example to POST request
+```curl -i -H "Content-Type: application/json" -X POST -d '{"bot":"bot_id", "chat_id":"chat_id", "msg":"Message here..."}' http://localhost:5000/broadcast```
