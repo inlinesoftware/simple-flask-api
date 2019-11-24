@@ -7,8 +7,10 @@ simple flask api
 
    - Python 2.7+ or 3.4+
    - Flask 0.12.3+
+   - Mysql Connector
 
 ```pip install Flask-API```
+```pip install mysql-connector```
 
 ### Starting
 ```python app.py```

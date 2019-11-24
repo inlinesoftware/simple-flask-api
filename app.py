@@ -2,6 +2,7 @@ from flask import Flask
 from flask import request, jsonify
 import urllib2
 import json
+from helpers.lead_helper import LeadHelper
 
 app = Flask(__name__)
 base_url = 'https://api.telegram.org/'
@@ -27,6 +28,11 @@ def broadcast_post():
 		contents = urllib2.urlopen(base_url+bot+"/sendMessage?chat_id="+chat_id+"&text="+msg).read()
 	else:
 		return "invalid token"
+
+@app.route("/lead/<name>/<email>/<origin>", methods=['GET'])
+def add_lead(name, email, origin):
+	lh = LeadHelper()
+	return lh.insert_lead(name, email, origin)
 
 if __name__ == '__main__':
 	app.run(debug=True)
