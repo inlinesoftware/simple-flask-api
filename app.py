@@ -34,5 +34,10 @@ def add_lead(name, email, origin):
 	lh = LeadHelper()
 	return lh.insert_lead(name, email, origin)
 
+@app.route("/campaing/<origin>", methods=['GET'])
+def compute_access(origin):
+	lh = LeadHelper()
+	return lh.compute_access(origin)
+
 if __name__ == '__main__':
 	app.run(debug=True)
