@@ -10,6 +10,7 @@ simple flask api
    - Mysql Connector
 
 ```pip install Flask-API```
+
 ```pip install mysql-connector```
 
 ### Starting
