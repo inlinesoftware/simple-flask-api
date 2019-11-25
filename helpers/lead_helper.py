@@ -1,5 +1,6 @@
 from connection.db_connection import DBConnection
 from helpers.telegram_helper import TelegramHelper
+import datetime
 
 class LeadHelper:
 	def __init__(self):
@@ -14,8 +15,9 @@ class LeadHelper:
 
 	def insert_lead(self, name, email, origin, alert):
 		cursor = self.connection.cursor()
-		sql    = "INSERT INTO lead (name, email, origin) VALUES (%s, %s, %s)"
-		val    = (name, email, origin)
+		now = datetime.datetime.utcnow()
+		sql    = "INSERT INTO lead (name, email, origin, date_time) VALUES (%s, %s, %s, %s)"
+		val    = (name, email, origin, now)
 		cursor.execute(sql, val)
 		self.connection.commit()
 		print(cursor.rowcount, "lead inserted.")
