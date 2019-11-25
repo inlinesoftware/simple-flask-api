@@ -5,7 +5,7 @@ class DBConnection:
 	def __init__(self):
 		self.localhost = '127.0.0.1'
 		self.username  = 'root'
-		self.password  = ''
+		self.password  = 'root'
 		self.database  = 'flask'
 
 	def get_connection(self):
