@@ -18,7 +18,7 @@ simple flask api
 
 ## script_conf.json
 
-Should create the file ```script_conf.json``` no diretório ```/config``` with the ```bot_id``` and the ```chat_id``` from the telegram, to broadcast some msg when the methods configured for.
+Should create the file ```script_conf.json``` in the directory ```/config``` with the ```bot_id``` and the ```chat_id``` from Telegram, to broadcast some msg when the methods are configured for.
 
 ```json
 {
